@@ -22,4 +22,4 @@ webView.render(html, baseURL: MarkupContent.resourceURL)
 
 ## License
 
-Migration is released under the [MIT License](LICENSE).
+`Markup` is released under the [MIT License](LICENSE).
