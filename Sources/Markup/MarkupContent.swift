@@ -9,7 +9,7 @@ import Foundation
 
 private class BundleLocator { }
 
-public enum MarkupContentType: Codable, Equatable, Hashable {
+public enum MarkupContentType: Codable, Equatable, Hashable, Sendable {
     case markdown
     case code
 
@@ -25,7 +25,7 @@ public enum MarkupContentType: Codable, Equatable, Hashable {
     }
 }
 
-public enum MarkupCodeStyle: Codable, Equatable, Hashable {
+public enum MarkupCodeStyle: Codable, Equatable, Hashable, Sendable {
     case github
     case google
     case intelliJ
@@ -48,7 +48,7 @@ public enum MarkupCodeStyle: Codable, Equatable, Hashable {
     }
 }
 
-public struct MarkupContent {
+public struct MarkupContent: Sendable {
     private static let charset: String = "<meta charset=\"utf-8\">"
     private static let phoneAdaptive: String =
     "<meta name=\"viewport\" content=\"width=device-width, " +
